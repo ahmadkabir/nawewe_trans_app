@@ -3,6 +3,7 @@ import { useRoutes } from "react-router-dom";
 import AppIndex from "./AppIndex";
 import Dashboard from "../component/Body/Dashboard";
 import OngoingTrip from "../component/Body/OngoingTrip";
+import Discover from "../component/Body/Discover";
 
 export default function AppNavigator(){
     let Pages = useRoutes([
@@ -15,8 +16,8 @@ export default function AppNavigator(){
                     element: <Dashboard />
                 },
                 {
-                    path: '/ongoing_trip',
-                    element: <OngoingTrip />
+                    path: '/discover',
+                    element: <Discover />
                 }
             ]
         }

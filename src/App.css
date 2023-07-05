@@ -143,16 +143,13 @@
   box-sizing: border-box;
   width: 100%;
   height: 160px;
-  /* background-color: #ffbf80; */
   border: 1px solid white;
   box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
-  /* backdrop-filter: blur(6px); */
   border-radius: 17px;
   cursor: pointer;
   transition: all 0.5s;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: center;
   user-select: none;
   font-weight: bolder;
@@ -172,4 +169,71 @@
 .image1{
   width: 70px;
   height: 50px;
+}
+
+/* Discover  */
+
+.discover_div{
+  padding-left: 30px;
+}
+
+.carders{
+  box-sizing: border-box;
+  width: 90%;
+  height: 80px;
+  background-color: #fff;
+  border: 1px solid #999999;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  user-select: none;
+  font-weight: bolder;
+  color: fff;
+  padding: 15px;
+}
+
+.carders:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+
+.carders:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.image{
+  width: 65px;
+  height: 50px;
+}
+
+.step_div{
+  margin-top: 40px;
+}
+
+.icon_{
+  margin-top: 10px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-color: #666666;
+  padding: 6px;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.div_of_step{
+  margin-top: 10px;
+}
+
+.carders input{
+  margin-right: 20px;
+}
+
+.carders_para{
+  margin-top: -10px;
+  font-weight: lighter;
 }

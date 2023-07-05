@@ -27,7 +27,7 @@ export default function Dashboard() {
         </nav>
         {step === 1 ?
             <div>
-                <Col md={11} style={{display: 'flex'}}>
+                <Col md={11} style={{display: 'flex'}} onClick={() => goto('/discover')}>
                     <Col md={4} style={{marginTop: '30px', marginLeft: 40}}>
                         <div className="card" style={{backgroundColor: '#ffbf80'}}>
                             <div style={{display: 'flex'}}>
