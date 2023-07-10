@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import NavBar from '../NavBar'
-import { Col } from 'reactstrap'
+import { Col, Row } from 'reactstrap'
 import img1 from '../Image/img3.f153ae21abda72334a4d.png'
 import img2 from '../Image/img2.df969720577b3ee7f6c1.png'
 import img3 from '../Image/img4.38cde03be64187682173.png'
@@ -27,8 +27,8 @@ export default function Dashboard() {
         </nav>
         {step === 1 ?
             <div>
-                <Col md={11} style={{display: 'flex'}} onClick={() => goto('/discover')}>
-                    <Col md={4} style={{marginTop: '30px', marginLeft: 40}}>
+                <Row style={{display: 'flex'}} onClick={() => goto('/discover')}>
+                    <Col md={4} style={{marginTop: '30px'}}>
                         <div className="card" style={{backgroundColor: '#ffbf80'}}>
                             <div style={{display: 'flex'}}>
                                 <img 
@@ -45,7 +45,7 @@ export default function Dashboard() {
                             </div>
                         </div>
                     </Col>
-                    <Col md={4} style={{marginTop: '30px',marginLeft: 20}}>
+                    <Col md={4} style={{marginTop: '30px'}}>
                         <div className="card" style={{backgroundColor: '#331a00', color:'#fff'}}>
                             <div style={{display: 'flex'}}>
                                 <img 
@@ -62,7 +62,7 @@ export default function Dashboard() {
                             </div>
                         </div>
                     </Col>
-                    <Col md={4} style={{marginTop: '30px',marginLeft: 20}}>
+                    <Col md={4} style={{marginTop: '30px'}}>
                         <div className="card" style={{backgroundColor: '#ffd9b3'}}>
                             <div style={{display: 'flex'}}>
                                 <img 
@@ -79,8 +79,8 @@ export default function Dashboard() {
                             </div>
                         </div>
                     </Col>
-                </Col>
-                <Col md={11} style={{display: 'flex',justifyContent: 'space-around'}}>
+                </Row>
+                <Row style={{display: 'flex',justifyContent: 'space-around'}}>
                     <Col md={4} style={{marginTop: '30px', marginLeft: 40}}>
                         <div className="card" style={{backgroundColor:'#ffffb3'}}>
                             <div style={{display: 'flex'}}>
@@ -115,7 +115,7 @@ export default function Dashboard() {
                             </div>
                         </div>
                     </Col>
-                </Col>
+                </Row>
             </div> : ''
         }
         {step === 2 ?

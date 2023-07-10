@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import NavBar from '../NavBar'
-import { Col } from 'reactstrap'
+import { Col, Row } from 'reactstrap'
 import img1 from '../Image/img5.fa08ce6ef02281466c52.png'
 import img2 from '../Image/undraw_People_re_8spw.png'
 import img3 from '../Image/undraw_delivery_truck_vt6p.png'
@@ -16,10 +16,10 @@ export default function Discover() {
     const [isOpen, setIsOpen] = useState(false);
     const [isOpen1, setIsOpen1] = useState(false);
 
-        const toggleToast = () => {
-            setIsOpen(!isOpen);
-            setIsOpen1(false);
-        };
+    const toggleToast = () => {
+        setIsOpen(!isOpen);
+        setIsOpen1(false);
+    };
     const toggleToast1 = () => {
         setIsOpen1(!isOpen1);
         setIsOpen(false);
@@ -39,7 +39,7 @@ export default function Discover() {
                 <h1>Discover</h1>
                 <h4>What Do you want to Discover</h4>
             </div>
-            <Col md={12} style={{display: 'flex', marginTop: 50}}>
+            <Row style={{display: 'flex', marginTop: 50}}>
 
                 {/* first Div that will show all Drivers */}
 
@@ -103,9 +103,9 @@ export default function Discover() {
                         </div>
                     </div>
                 </Col>
-            </Col>
+            </Row>
 
-            <Col md={12}>
+            <Row>
                 <Toast isOpen={isOpen} style={{width: '97%', marginTop: 30}}>
                     <ToastHeader toggle={toggleToast}>
                         <h3>How do you want to search for drivers </h3>
@@ -114,7 +114,7 @@ export default function Discover() {
                         <DiscoverToast />
                     </ToastBody>
                 </Toast>
-            </Col>
+            </Row>
 
             <Col md={12}>
                 <Toast isOpen={isOpen1} style={{width: '97%', marginTop: 30}}>

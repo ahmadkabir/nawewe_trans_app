@@ -1,25 +1,39 @@
 import React from 'react'
 import { Col, Row } from 'reactstrap'
 import SideBar from '../component/SideBar'
-import { Outlet } from 'react-router'
+import { Outlet, useNavigate } from 'react-router'
+import { MdDashboard, MdOutlineBedroomParent, MdRoomPreferences } from 'react-icons/md'
+import { ImUsers} from 'react-icons/im'
+import { FaHotel} from 'react-icons/fa'
 
 export default function AppIndex() {
+  const goto = useNavigate()
+
   return (
     <div className='body'>
-      {/* <Row>
-        <Col md={2}></Col>
-        <Col md={10}>
-          <nav className='bg-success'>
-            <li></li>
-            <li></li>
-            <li></li>
-          </nav>
-        </Col>
-      </Row> */}
         <Row>
             <Col md={2}>
                 <SideBar />
             </Col>
+            <div className="mobile_menu" style={{width: "93%"}}>
+              <div>
+                <MdDashboard onClick={() => goto('#')} />
+              </div>
+              <div>
+                <FaHotel
+                  size="1.7rem"
+                  onClick={() => goto('#')}
+                />
+              </div>
+              <div>
+                <MdOutlineBedroomParent
+                  onClick={() => goto('#')}
+                />
+              </div>
+              <div>
+                <MdRoomPreferences onClick={() => goto('#')} />
+              </div>
+            </div>
             <Col md={10}>
                 <Col md={12}>
                   <Outlet />
