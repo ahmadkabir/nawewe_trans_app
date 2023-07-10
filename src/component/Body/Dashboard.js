@@ -81,7 +81,7 @@ export default function Dashboard() {
                     </Col>
                 </Row>
                 <Row style={{display: 'flex',justifyContent: 'space-around'}}>
-                    <Col md={4} style={{marginTop: '30px', marginLeft: 40}}>
+                    <Col md={4} style={{marginTop: '30px'}}>
                         <div className="card" style={{backgroundColor:'#ffffb3'}}>
                             <div style={{display: 'flex'}}>
                                 <img 
@@ -98,7 +98,7 @@ export default function Dashboard() {
                             </div>
                         </div>
                     </Col>
-                    <Col md={4} style={{marginTop: '30px',marginLeft: 20}}>
+                    <Col md={4} style={{marginTop: '30px'}}>
                         <div className="card" style={{backgroundColor: '#ccf2ff'}}>
                             <div style={{display: 'flex'}}>
                                 <img 

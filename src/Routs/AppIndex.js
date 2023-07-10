@@ -15,7 +15,7 @@ export default function AppIndex() {
             <Col md={2}>
                 <SideBar />
             </Col>
-            <div className="mobile_menu" style={{width: "93%"}}>
+            <div className="mobile_menu" style={{width: "100%"}}>
               <div>
                 <MdDashboard onClick={() => goto('#')} />
               </div>

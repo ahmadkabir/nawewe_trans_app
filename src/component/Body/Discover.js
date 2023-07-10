@@ -58,7 +58,7 @@ export default function Discover() {
                         </div>
                     </div>
                 </Col>
-                <Col md={3}>
+                <Col md={3} style={{marginTop: 10}}>
                     <div className="carders">
                         <div style={{display: 'flex'}}>
                             <img 
@@ -73,7 +73,7 @@ export default function Discover() {
                         </div>
                     </div>
                 </Col>
-                <Col md={3}>
+                <Col md={3} style={{marginTop: 10}}>
                     <div className="carders">
                         <div style={{display: 'flex'}}>
                             <img 
@@ -88,7 +88,7 @@ export default function Discover() {
                         </div>
                     </div>
                 </Col>
-                <Col md={3}>
+                <Col md={3} style={{marginTop: 10}}>
                     <div className="carders" onClick={toggleToast1}>
                         <div style={{display: 'flex'}}>
                             <img 
@@ -105,7 +105,7 @@ export default function Discover() {
                 </Col>
             </Row>
 
-            <Row>
+            <Row style={{marginBottom :70}}>
                 <Toast isOpen={isOpen} style={{width: '97%', marginTop: 30}}>
                     <ToastHeader toggle={toggleToast}>
                         <h3>How do you want to search for drivers </h3>
