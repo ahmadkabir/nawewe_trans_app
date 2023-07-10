@@ -5,23 +5,46 @@ import img1 from '../Image/img5.fa08ce6ef02281466c52.png'
 import img2 from '../Image/undraw_People_re_8spw.png'
 import img3 from '../Image/undraw_delivery_truck_vt6p.png'
 import img4 from '../Image/undraw_coffee_with_friends_3cbj.png'
-import { IoIosArrowForward } from 'react-icons/io'
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 import { GiCrossedBones } from 'react-icons/gi'
-
+import { useNavigate } from 'react-router'
+import { Button, Toast, ToastHeader, ToastBody } from 'reactstrap';
+import DiscoverToast from '../ToastModel/DiscoverToast'
+import FriendToast from '../ToastModel/FriendToast'
 export default function Discover() {
-    const [step, setStep] = useState(0)
+    const goto =useNavigate()
+    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen1, setIsOpen1] = useState(false);
+
+        const toggleToast = () => {
+            setIsOpen(!isOpen);
+            setIsOpen1(false);
+        };
+    const toggleToast1 = () => {
+        setIsOpen1(!isOpen1);
+        setIsOpen(false);
+    };
 
   return (
     <div>
         <NavBar componentName="Discover"/>
+        <div style={{paddingLeft: 20, paddingBottom: 30}}>
+            <button 
+                className='backward_arrow'
+                onClick={() => goto('/dashboard')}
+            ><IoIosArrowBack /> Back</button>
+        </div>
         <div className='discover_div'>
             <div>
                 <h1>Discover</h1>
                 <h4>What Do you want to Discover</h4>
             </div>
-            <Col md={12} style={{display: 'flex', marginTop: 60}}>
+            <Col md={12} style={{display: 'flex', marginTop: 50}}>
+
+                {/* first Div that will show all Drivers */}
+
                 <Col md={3}>
-                    <div className="carders" onClick={() => {setStep(1)}}>
+                    <div className="carders" onClick={toggleToast}>
                         <div style={{display: 'flex'}}>
                             <img 
                                 src={img1} 
@@ -66,7 +89,7 @@ export default function Discover() {
                     </div>
                 </Col>
                 <Col md={3}>
-                    <div className="carders">
+                    <div className="carders" onClick={toggleToast1}>
                         <div style={{display: 'flex'}}>
                             <img 
                                 src={img4} 
@@ -81,49 +104,28 @@ export default function Discover() {
                     </div>
                 </Col>
             </Col>
-            {step === 1 ? 
-                <div className='step_div'>
-                    <div style={{display: 'flex', justifyContent: 'space-around'}}>
+
+            <Col md={12}>
+                <Toast isOpen={isOpen} style={{width: '97%', marginTop: 30}}>
+                    <ToastHeader toggle={toggleToast}>
                         <h3>How do you want to search for drivers </h3>
-                        <GiCrossedBones 
-                            className='icon_'
-                            onClick={() => {setStep(0)}}
-                        />
-                    </div>
-                    <Col md={12} style={{marginTop: '30px', display: 'flex'}}>
-                        <Col md={6}>
-                            <div className="carders">
-                                <div style={{display: 'flex', padding: 10}}>
-                                    <div style={{display: 'flex'}}>  
-                                        <input
-                                            type='radio' 
-                                        />
-                                        <div className='div_of_step'>
-                                            <h5 style={{letterSpacing: 1}}>Show me all driver</h5>
-                                            <p className='carders_para'>No filter</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col md={6}>
-                            <div className="carders">
-                                <div style={{display: 'flex', padding: 10}}>
-                                    <div style={{display: 'flex'}}>  
-                                        <input
-                                            type='radio' 
-                                        />
-                                        <div className='div_of_step'>
-                                            <h5 style={{letterSpacing: 1}}>Show me all Filterd drivers</h5>
-                                            <p className='carders_para'>Filter by Location, amount etc</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col>
-                    </Col>
-                </div> : ''
-            }
+                    </ToastHeader>
+                    <ToastBody>
+                        <DiscoverToast />
+                    </ToastBody>
+                </Toast>
+            </Col>
+
+            <Col md={12}>
+                <Toast isOpen={isOpen1} style={{width: '97%', marginTop: 30}}>
+                    <ToastHeader toggle={toggleToast1}>
+                        <h3>Pick an Action </h3>
+                    </ToastHeader>
+                    <ToastBody>
+                        <FriendToast />
+                    </ToastBody>
+                </Toast>
+            </Col>
         </div>
     </div>
   )

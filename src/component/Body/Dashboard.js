@@ -45,7 +45,7 @@ export default function Dashboard() {
                             </div>
                         </div>
                     </Col>
-                    <Col md={4} style={{marginTop: '30px',marginLeft: 20}} onClick={() => goto('/ongoing_trip')}>
+                    <Col md={4} style={{marginTop: '30px',marginLeft: 20}}>
                         <div className="card" style={{backgroundColor: '#331a00', color:'#fff'}}>
                             <div style={{display: 'flex'}}>
                                 <img 
