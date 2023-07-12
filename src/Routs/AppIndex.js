@@ -3,7 +3,7 @@ import { Col, Row } from 'reactstrap'
 import SideBar from '../component/SideBar'
 import { Outlet, useNavigate } from 'react-router'
 import { MdDashboard, MdOutlineBedroomParent, MdRoomPreferences } from 'react-icons/md'
-import { ImUsers } from 'react-icons/im'
+// import { ImUsers } from 'react-icons/im'
 import { FaHotel } from 'react-icons/fa'
 
 export default function AppIndex() {
