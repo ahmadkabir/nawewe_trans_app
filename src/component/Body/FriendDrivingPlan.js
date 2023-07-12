@@ -26,7 +26,7 @@ export default function FriendDrivingPlan() {
         <div style={{padding: 20}}>
             <h1>Pick friend driving plan to join</h1>
         </div>
-        <Row>
+        <Row style={{marginBottom: 0}}>
             {DrivingPlan.map((idx) => (
                 <Col md={4} onClick={toggleToast}>
                     <BodyCards 
@@ -41,8 +41,8 @@ export default function FriendDrivingPlan() {
                 </Col>
             ))}
         </Row>
-        <Col md={12}>
-                <Toast isOpen={isOpen} style={{width: '97%', marginTop: 30}}>
+        <Row style={{marginBottom: 60}}>
+                <Toast isOpen={isOpen} style={{width: '97%', marginTop: 30, marginLeft: 10}}>
                     <ToastHeader toggle={toggleToast}>
                         <h3>Are you sure you want to send</h3>
                     </ToastHeader>
@@ -90,7 +90,7 @@ export default function FriendDrivingPlan() {
                         </Row>
                     </ToastBody>
                 </Toast>
-            </Col>
+            </Row>
     </div>
   )
 }
