@@ -6,9 +6,8 @@ import img2 from '../Image/undraw_People_re_8spw.png'
 import img3 from '../Image/undraw_delivery_truck_vt6p.png'
 import img4 from '../Image/undraw_coffee_with_friends_3cbj.png'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
-import { GiCrossedBones } from 'react-icons/gi'
 import { useNavigate } from 'react-router'
-import { Button, Toast, ToastHeader, ToastBody } from 'reactstrap';
+import { Toast, ToastHeader, ToastBody } from 'reactstrap';
 import DiscoverToast from '../ToastModel/DiscoverToast'
 import FriendToast from '../ToastModel/FriendToast'
 export default function Discover() {
@@ -58,7 +57,7 @@ export default function Discover() {
                         </div>
                     </div>
                 </Col>
-                <Col md={3} style={{marginTop: 10}}>
+                <Col md={3} >
                     <div className="carders">
                         <div style={{display: 'flex'}}>
                             <img 
@@ -73,7 +72,7 @@ export default function Discover() {
                         </div>
                     </div>
                 </Col>
-                <Col md={3} style={{marginTop: 10}}>
+                <Col md={3} >
                     <div className="carders">
                         <div style={{display: 'flex'}}>
                             <img 
@@ -88,7 +87,7 @@ export default function Discover() {
                         </div>
                     </div>
                 </Col>
-                <Col md={3} style={{marginTop: 10}}>
+                <Col md={3} >
                     <div className="carders" onClick={toggleToast1}>
                         <div style={{display: 'flex'}}>
                             <img 
@@ -116,7 +115,7 @@ export default function Discover() {
                 </Toast>
             </Row>
 
-            <Col md={12}>
+            <Col md={12} style={{marginBottom :70}}>
                 <Toast isOpen={isOpen1} style={{width: '97%', marginTop: 30}}>
                     <ToastHeader toggle={toggleToast1}>
                         <h3>Pick an Action </h3>
