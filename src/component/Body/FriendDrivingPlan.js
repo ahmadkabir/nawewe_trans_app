@@ -4,7 +4,7 @@ import { Button, Col, Row, Toast, ToastBody, ToastHeader } from 'reactstrap'
 import { IoIosArrowBack } from 'react-icons/io'
 import { useNavigate } from 'react-router'
 import { DrivingPlan,  } from './dataArray/dataArray'
-import { BodyCards } from './CardsComponent/BodyCards'
+import  {BodyCards}  from './CardsComponent/BodyCards'
 
 export default function FriendDrivingPlan() {
     const goto = useNavigate()

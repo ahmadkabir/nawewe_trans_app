@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardHeader, CardBody } from 'reactstrap';
 
-export const ReusableCard = (props) => {
+export const BodyCards = (props) => {
   const { name, time, vehicleType, fare, commonGroup, from, to, spacesLeft } = props;
 
   return (
