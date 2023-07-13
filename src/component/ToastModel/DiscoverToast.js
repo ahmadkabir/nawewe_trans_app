@@ -12,7 +12,7 @@ export default function DiscoverToast() {
         <div className='step_div'>
             <div style={{display: 'flex', justifyContent: 'space-around'}}>
                 </div>
-                    <Row>
+                    <Row className='m-0 p-0'>
                         {
                             discoverToast.map((idx) => (
                                 <Col md={6} onClick={() => goto(`/${idx.goto}`)}>

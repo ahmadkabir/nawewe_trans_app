@@ -35,11 +35,13 @@ export default function AppIndex() {
           </div>
         </div>
         <Col md={10}>
-          <Row>
-            <Col md={12}>
-              <Outlet />
-            </Col>
-          </Row>
+          <div>
+            <Row>
+              <Col md={12}>
+                <Outlet />
+              </Col>
+            </Row>
+          </div>
         </Col>
       </Row>
     </div>

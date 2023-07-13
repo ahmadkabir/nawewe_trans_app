@@ -104,7 +104,7 @@ export default function Discover() {
                 </Col>
             </Row>
 
-            <Row style={{marginBottom :70}}>
+            <Row>
                 <Toast isOpen={isOpen} style={{width: '97%', marginTop: 30}}>
                     <ToastHeader toggle={toggleToast}>
                         <h3>How do you want to search for drivers </h3>

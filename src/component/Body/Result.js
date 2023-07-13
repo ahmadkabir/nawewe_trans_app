@@ -22,7 +22,7 @@ export default function Result() {
             <h1>Search Result (driver's List )</h1>
             <h4>Double tap to comfirm ride</h4>
         </div>
-        <Row style={{marginBottom: 70}}>
+        <Row style={{marginBottom: 70}}>    
             {DrivingPlan.map((idx) => (
                 <Col md={4}>
                     <BodyCards 

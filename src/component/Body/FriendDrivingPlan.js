@@ -5,6 +5,7 @@ import { IoIosArrowBack } from 'react-icons/io'
 import { useNavigate } from 'react-router'
 import { DrivingPlan,  } from './dataArray/dataArray'
 import  {BodyCards}  from './CardsComponent/BodyCards'
+import RadioCard from './CardsComponent/RadioCard'
 
 export default function FriendDrivingPlan() {
     const goto = useNavigate()
@@ -42,55 +43,35 @@ export default function FriendDrivingPlan() {
             ))}
         </Row>
         <Row style={{marginBottom: 60}}>
-                <Toast isOpen={isOpen} style={{width: '97%', marginTop: 30, marginLeft: 10}}>
-                    <ToastHeader toggle={toggleToast}>
-                        <h3>Are you sure you want to send</h3>
-                    </ToastHeader>
-                    <ToastBody>
-                        <Row>
-                            <Col md={6}>
-                                <div className="toastCard">
-                                    <div style={{display: 'flex', padding: 10}}>
-                                        <div style={{display: 'flex'}}>  
-                                            <input
-                                                type='radio' 
-                                                style={{marginRight: 15}}
-                                            />
-                                            <div className='div_of_step'>
-                                                <h5 style={{letterSpacing: 1}}>Yes</h5>
-                                                <p className='carders_para'>Filter by Location, amount etc</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Col>
-                            <Col md={6}>
-                                <div className="toastCard">
-                                    <div style={{display: 'flex', padding: 10}}>
-                                        <div style={{display: 'flex'}}>  
-                                            <input
-                                                type='radio' 
-                                                style={{marginRight: 15}}
-                                            />
-                                            <div className='div_of_step'>
-                                                <h5 style={{letterSpacing: 1}}>No</h5>
-                                                <p className='carders_para'>Filter by Location, amount etc</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Col>
-                            <Col md={12} className="mt-4">
-                                <center>
-                                    <Button className="bg-success" size="lg">
-                                        Proceed
-                                    </Button>
-                                </center>
-                            </Col>
-                        </Row>
-                    </ToastBody>
-                </Toast>
-            </Row>
+            <Toast isOpen={isOpen} style={{width: '97%', marginTop: 30, marginLeft: 10}}>
+                <ToastHeader toggle={toggleToast}>
+                    <h3>Are you sure you want to send</h3>
+                </ToastHeader>
+                <ToastBody>
+                    <Row>
+                        <Col md={6}>
+                            <RadioCard 
+                                label= 'Yes'
+                                description= 'Filter by Location, amount etc'
+                            />
+                        </Col>
+                        <Col md={6}>
+                            <RadioCard 
+                                label= 'No'
+                                description= 'Filter by Location, amount etc'
+                            />
+                        </Col>
+                        <Col md={12} className="mt-4">
+                            <center>
+                                <Button className="bg-success" size="lg">
+                                    Proceed
+                                </Button>
+                            </center>
+                        </Col>
+                    </Row>
+                </ToastBody>
+            </Toast>
+        </Row>
     </div>
   )
 }

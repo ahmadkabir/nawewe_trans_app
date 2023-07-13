@@ -6,6 +6,13 @@
   background-color: #f2f2f2;
 }
 
+.body_div{
+  height: 97vh;
+  overflow-y: auto;
+  overflow-x: none;
+  width: 100%;
+}
+
 /* side BAr */
 
 .sidebar{
