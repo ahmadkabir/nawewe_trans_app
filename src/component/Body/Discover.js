@@ -13,7 +13,7 @@ import FriendToast from '../ToastModel/FriendToast'
 export default function Discover() {
     const goto =useNavigate()
     const [isOpen, setIsOpen] = useState(false);
-    const [isOpen1, setIsOpen1] = useState(false);
+    const [isOpen1, setIsOpen1] = useState(false);  
 
     const toggleToast = () => {
         setIsOpen(!isOpen);

@@ -10,13 +10,19 @@ import RadioCard from './CardsComponent/RadioCard'
 export default function FriendDrivingPlan() {
     const goto = useNavigate()
     const [isOpen, setIsOpen] = useState(false);
+    const [isOpen1, setIsOpen1] = useState(false);
 
     const toggleToast = () => {
         setIsOpen(!isOpen);
     };
 
+    const toggleToast1 = () => {
+        setIsOpen1(!isOpen1);
+        setIsOpen(false);
+    }
+
   return (
-    <div>
+    <div className='body_div'>
         <NavBar componentName="Pick friend driving plan"/>
         <div style={{paddingLeft: 20}}>
             <button 
@@ -27,7 +33,7 @@ export default function FriendDrivingPlan() {
         <div style={{padding: 20}}>
             <h1>Pick friend driving plan to join</h1>
         </div>
-        <Row style={{marginBottom: 0}}>
+        <Row style={{marginBottom: 0}} className='m-0 p-0'>
             {DrivingPlan.map((idx) => (
                 <Col md={4} onClick={toggleToast}>
                     <BodyCards 
@@ -42,20 +48,20 @@ export default function FriendDrivingPlan() {
                 </Col>
             ))}
         </Row>
-        <Row style={{marginBottom: 60}}>
+        <Row style={{marginBottom: 60}} className='m-0 p-0'>
             <Toast isOpen={isOpen} style={{width: '97%', marginTop: 30, marginLeft: 10}}>
                 <ToastHeader toggle={toggleToast}>
                     <h3>Are you sure you want to send</h3>
                 </ToastHeader>
                 <ToastBody>
-                    <Row>
-                        <Col md={6}>
+                    <Row className='m-0 p-0'>
+                        <Col md={6} onClick={toggleToast1}>
                             <RadioCard 
                                 label= 'Yes'
                                 description= 'Filter by Location, amount etc'
                             />
                         </Col>
-                        <Col md={6}>
+                        <Col md={6} onClick={() => {setIsOpen(false)}}>
                             <RadioCard 
                                 label= 'No'
                                 description= 'Filter by Location, amount etc'
@@ -68,6 +74,21 @@ export default function FriendDrivingPlan() {
                                 </Button>
                             </center>
                         </Col>
+                    </Row>
+                </ToastBody>
+            </Toast>
+        </Row>
+        <Row style={{marginBottom: 60}} className='m-0 p-0'>
+            <Toast isOpen={isOpen1} style={{width: '97%', marginTop: 30, marginLeft: 10}}>
+                <ToastHeader toggle={toggleToast1}>
+                    <h3>Are you sure you want to send</h3>
+                </ToastHeader>
+                <ToastBody>
+                    <Row className='m-0 p-0'>
+                        <center>
+                            <h4 className='text-success'>Send Successful</h4>
+                            {/* < /> */}
+                        </center>
                     </Row>
                 </ToastBody>
             </Toast>
