@@ -11,13 +11,13 @@ export default function FriendDrivingPlan() {
     const goto = useNavigate()
     const [isOpen, setIsOpen] = useState(false);
     const [isOpen1, setIsOpen1] = useState(false);
-
+;
     const toggleToast = () => {
         setIsOpen(!isOpen);
     };
 
     const toggleToast1 = () => {
-        setIsOpen1(!isOpen1);
+        setIsOpen1(!isOpen1);  
         setIsOpen(false);
     }
 
