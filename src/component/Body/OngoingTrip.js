@@ -93,7 +93,10 @@ export default function OngoingTrip() {
                                 description= 'As the driver, the car is about to move. As passenger, you are in car'
                             />
                         </Col>
-                        <Col md={6}>
+                        <Col md={6} onClick={() => {
+                          setIsOpen1(true);
+                          setIsOpen(false)
+                        }}>
                             <RadioCard 
                                 label= 'No. Not ready'
                                 description= 'As driver, end trip. As passenger end trip'

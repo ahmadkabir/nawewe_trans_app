@@ -22,7 +22,7 @@ export default function SetdrivingPlan() {
     <div>
       <NavBar componentName="Driving Plans" />
       <div style={{ paddingLeft: 20 }}>
-        <button className="backward_arrow" onClick={() => goto('/discover')}>
+        <button className="backward_arrow" onClick={() => goto('/dashboard')}>
           <IoIosArrowBack /> Back
         </button>
       </div>

@@ -59,7 +59,7 @@ export default function Dashboard() {
                         color= '#fff'
                     />
                 </Col>
-                <Col md={4} style={{marginTop: '30px'}} onClick={() => goto('/set_driving_plan')}>
+                <Col md={4} style={{marginTop: '30px'}} onClick={toggleToast1}>
                     <ImageCard 
                         image= {img3}
                         title= 'Driving Plans'
@@ -122,16 +122,16 @@ export default function Dashboard() {
                     </ToastHeader>
                     <ToastBody>
                         <Row>
-                            <Col md={6} onClick={() => goto('/end_trip')}>
+                            <Col md={6} onClick={() => goto('/set_driving_plan')}>
                                 <RadioCard 
-                                    label= 'See passeger ongoing trip'
-                                    description= 'Enable early previewers to see driver view while on trip'
+                                    label= 'Create new driving plan'
+                                    description= 'Enable passengers to search, send invites. Enables you to invite passengers'
                                 />
                             </Col>
                             <Col md={6} onClick={() => goto('/on_going_trip_for_pass')}>
                                 <RadioCard 
-                                    label= 'See passengers about to start'
-                                    description= 'Enable early previewers to see driver view while on trip'
+                                    label= 'View existing driving plans'
+                                    description= 'you create a source/destination driving plan earlier, Manager it here'
                                 />
                             </Col>
                         </Row>

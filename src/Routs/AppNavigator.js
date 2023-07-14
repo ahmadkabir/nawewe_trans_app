@@ -13,6 +13,7 @@ import ConfirmQR from "../component/Body/ConfirmQR";
 import QRCode from "../component/Body/QRCode";
 import EndTrip from "../component/Body/EndTrip";
 import SetdrivingPlan from "../component/Body/SetdrivingPlan";
+import PushNotification from "../component/Body/PushNotification";
 
 export default function AppNavigator(){
     let Pages = useRoutes([
@@ -67,6 +68,10 @@ export default function AppNavigator(){
                 {
                     path: '/set_driving_plan',
                     element: <SetdrivingPlan />
+                },
+                {
+                    path: '/push_notification',
+                    element: <PushNotification />
                 }
             ]
         }

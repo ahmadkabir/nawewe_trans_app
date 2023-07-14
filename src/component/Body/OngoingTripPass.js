@@ -76,7 +76,7 @@ export default function OngoingTripPass() {
                                 description= 'tell the passenger to open their hone and show their QR code'
                             />
                         </Col>
-                        <Col md={6} onClick={toggleToast}>
+                        <Col md={6} onClick={() => goto('/push_notification')}>
                             <RadioCard 
                                 label= 'Use push notification/Email'
                                 description= 'Send push notification/Email to passengers, then tell passengers to open app'
